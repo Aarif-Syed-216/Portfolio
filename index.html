@@ -1,129 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
-    <title>Portfolio</title>
-</head>
-<body>
-    <div id="header" id="home" >
-        <div class="container">
-            <nav>
-                <a  class="logo" href="#"><img src="imgs/logo.png"></a>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#project">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div style="display:flex; flex-wrap: wrap; margin-bottom: 80px;">
-                <div class="header-text" >
-                    <p>Tech Enthusiast</p>
-                    <br/>
-                    <h1>Hii Im <span>Punith</span> From India!</h1> 
-                </div>
-                <div style=" display:block; align-items:center;">
-                    <img src="imgs/web dev.png" style="max-width:400px; float: right; margin-top: 20px;">
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Syed Aarif</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Syed Aarif</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Syed Aarif profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Syed Aarif</h1>
+        <p class="section__text__p2">Beginner Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/SYEDAARIF.pdf')"
+          >
+            Download Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/aarifsyed'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Aarif-Syed-216'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/about.png"
+                alt="about icon"
+                class="icon"
+              />
+              <h3>About</h3>
+              <p>A passionate tech enthusiast from Rajahmundry, Andhra Pradesh, with a strong interest in science, technology, and programming. Completed various projects demonstrating skills and eagerness to learn, making a valuable addition to any tech team.</p>
             </div>
-            <div  id=about style="display: flex; width:100%;height:fit-content;
-             background-color:transparent ;color:#8E06F8; justify-content: center; margin:10px; border:2px solid #8E06F8;
-              border-radius:10% ;box-shadow: 3px 2px 2px #8E06F8;">
-                <h3 style="font-size:25px;font-weight: bold;">About</h3>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p><br />Bachelor of Technology<br />in <br />Electronics and Communication</p>
             </div>
-            <div  style="display:flex; flex-wrap:wrap; width:100%; justify-content: space-around;">
-                    <div class="content" style="display: flex;justify-content: center;">
-                        <div>
-                            <p style="font-size: 20px; color:white;">
-                                Passionate tech enthusiast from Rajahmundry, Andhra Pradesh, 
-                                with a strong interest in science, technology, and <span style="color:#8E06F8">programming</span>. 
-                                Completed various projects demonstrating skills and eagerness to 
-                                learn, making a valuable addition to any tech team.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <span class="skill-head">Programming Languages</span>
-                        <div style="display:flex; margin-top:10px; flex-wrap: wrap;">
-                            <p class="skill">C</p>
-                            <p class="skill">Python</p>
-                            <p class="skill">Java</p>
-                            <p class="skill">Java Script</p>
-                            <p class="skill">Dart</p>
-                        </div>
-                        <span class="skill-head">Front-End</span>
-                        <div style="display:flex; margin-top:10px; flex-wrap: wrap;">
-                            <p class="skill">HTML</p>
-                            <p class="skill">CSS</p>
-                            <p class="skill">React.js</p>
-                            <p class="skill">Bootstrap</p>
-                        </div>
-                        <span class="skill-head">Other Technologies</span>
-                        <div style="display:flex; margin-top:10px; flex-wrap: wrap;">
-                            <p class="skill">Flask</p>
-                            <p class="skill">Django</p>
-                            <p class="skill">SQL</p>
-                            <p class="skill">Express</p>
-                            
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div style="display:flex;margin:10px;flex-wrap:wrap; align-items: center;">
-                            <p style="font-size: 20px; color:white;" >
-                                I'm a tech enthusiast who loves learning new software development 
-                                skills and staying current with the latest trends and technologies.  
-                                >>>Want to Know More About me here check-out my resume</p>
-                            <a href="imgs/resume.pdf" class="skill" Style="text-decoration: none;">Resume </a>
-                        </div>
-                    </div>
-            </div>
-            <div  id=project style="display: flex; width:100%;height:fit-content;
-            background-color:transparent;color:#8E06F8; justify-content: center; margin:10px;border:2px solid #8E06F8;
-             border-radius:10%;box-shadow: 3px 2px 2px #8E06F8;">
-               <h3 style="font-size:25px;font-weight: bold;">Projects</h3>
-           </div>
-            <div  style="display:flex; flex-wrap:wrap; width:100%; justify-content: space-around;">
-                <div class="content">
-                    <div style="display: flex;flex-direction: column;padding-left: 12px; justify-content:center; align-items: center; background-color:rgba(0,0,0,0.2)">
-                        <img src="imgs/newsapp.png" style="width:90%; border:none; border-radius:10px"></a>
-                        <p style="color:white; justify-self: center; font-size: 15px">Developed a news application website using <span style="color:#8E06F8">Django, HTML, and JavaScript </span> to explore full-stack web
-                            development skills.</p>
-                            <p style="color:white; justify-self: center; font-size: 15px;">Utilized best practices in software engineering, including Git and testing using django's
-                            framework , to ensure a high-quality codebase.</p>
-
-                        
-                    </div>
+          </div>
+          <div class="text-container">
+            <p>
+                Aspiring fresher passionate and driven to contribute to impactful projects in a growth-oriented
+                company, while continuously expanding my technical skills and embracing new challenges in a
+                collaborative team environment.                
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#skills'"
+      />
+    </section>
+    <section id="skills">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">skills</h1>
+      <div class="skills-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="skills-sub-title">Languages</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C</h3>
+                  <p>Intermediate</p>
                 </div>
-                <div class="content">
-                    <div style="display: flex;flex-direction: column;padding-left: 12px; justify-content:center; align-items: center; background-color:rgba(0,0,0,0.2)">
-                        <a href="https://github.com/PavanPunith/weather-app"><img src="imgs/weather.png" style="width:90%; border:none; border-radius:10px"></a>
-                        <p style="color:white; justify-self: center; font-size: 15px">Developed a Weather app using <span style="color:#8E06F8">React.js,</span> HTML, CSS, JS and used OpenWeatherMap API which provides us with access to weather data from around the world. </p>
-                    </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
                 </div>
-                <div class="content">
-                    <div style="display: flex;flex-direction: column;padding-left: 12px; justify-content: center; align-items: center; background-color:rgba(0,0,0,0.2)">
-                        <a href="https://github.com/PavanPunith/dictionary"><img src="imgs/Dictionary.png" style="width:90%; border:none; border-radius:10px"></a>
-                        <p style="color:white; justify-self: center; font-size: 15px;"> Developed a Dictionary website with API integration and the techstack include HTML,CSS,JS.</p>
-                    </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Experienced</p>
                 </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
-            <div  id=contact style="display: flex; width:100%;height:fit-content;
-            background-color:transparent;color:#8E06F8; justify-content: center; margin:10px;border:2px solid #8E06F8;
-             border-radius:10%;box-shadow: 3px 2px 2px #8E06F8;">
-               <h3 style="font-size:25px;font-weight: bold;">Contact</h3>
-           </div>
-           <div style="display: flex;justify-content: center;">
-                <div class="content-contact" >
-                        <div style="display:flex; flex-direction: row;  justify-content: center;">
-                            <a href="https://github.com/PavanPunith"><img  class="contacticon" src="imgs/Github.png"></a>
-                            <a href="https://www.linkedin.com/in/pavanpunith"><img class="contacticon" src="imgs/linkedin.png"></a>
-                            <a href="mailto:pavanpunith001@gmail.com"><img  class="contacticon" src="imgs/mail.png"></a>
-                            <a href="tel:+916305237156"><img  class="contacticon" src="imgs/phone.png"></a>
-                        </div>
-                    </div>
+          </div>
+          <div class="details-container">
+            <h2 class="skills-sub-title">Tech Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Django</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Rest API</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Django Rest Framework</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
-</body>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="skills-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Recipe Sharing and Meal Planner Application</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Employee Management System</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Weather Application</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-4.png"
+                alt="Project 4"
+                class="project-img"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Dictionary</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-5.png"
+                alt="Project 5"
+                class="project-img"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Blog Website</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:aarifsyed216@gmail.com">aarifsyed216@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/aarifsyed/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
